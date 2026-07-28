@@ -1,0 +1,1164 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Jadwal turnamen mini soccer Agustusan 2026 — 5 tim, 10 laga, 3 malam.">
+<title>Jadwal Mini Soccer League 17-an</title>
+<style>
+  :root {
+    color-scheme: light dark;
+
+    /* Light: team sheet tercetak, kertas berbias hijau */
+    --pitch:      #F3F6F2;
+    --raised:     #FFFFFF;
+    --sunken:     #EBEFE9;
+    --line:       #D8E0D7;
+    --line-soft:  #E7ECE5;
+    --chalk:      #15201A;
+    --chalk-mid:  #46564C;
+    --chalk-dim:  #6B7C72;
+    --merah:      #BB2E26;
+    --amber:      #8A6408;
+    --glow:       transparent;
+    --shadow:     0 1px 2px rgba(21,32,26,.04), 0 10px 28px -18px rgba(21,32,26,.35);
+    --ring:       rgba(187,46,38,.35);
+
+    --font-display: "Avenir Next Condensed", "Arial Narrow", "Roboto Condensed",
+                    "Liberation Sans Narrow", "Helvetica Neue", system-ui, sans-serif;
+    --font-body:    system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-data:    ui-monospace, "SF Mono", "Menlo", "Cascadia Mono", "Consolas", monospace;
+
+    --fs-xs:   0.6875rem;
+    --fs-sm:   0.8125rem;
+    --fs-base: 0.9375rem;
+    --fs-md:   1.0625rem;
+    --fs-lg:   1.3125rem;
+    --fs-xl:   1.75rem;
+
+    --pad: clamp(1rem, 4vw, 1.5rem);
+    --radius: 10px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Dark: lapangan malam di bawah lampu sorot */
+      --pitch:      #0D1411;
+      --raised:     #151E19;
+      --sunken:     #101813;
+      --line:       #26332C;
+      --line-soft:  #1D2721;
+      --chalk:      #E9EFEA;
+      --chalk-mid:  #A9BAB0;
+      --chalk-dim:  #82938A;
+      --merah:      #F0574E;
+      --amber:      #E7BC63;
+      --glow:       rgba(231,188,99,.075);
+      --shadow:     0 1px 2px rgba(0,0,0,.4), 0 14px 34px -20px rgba(0,0,0,.8);
+      --ring:       rgba(240,87,78,.45);
+    }
+  }
+
+  :root[data-theme="light"] {
+    --pitch:#F3F6F2; --raised:#FFFFFF; --sunken:#EBEFE9;
+    --line:#D8E0D7; --line-soft:#E7ECE5;
+    --chalk:#15201A; --chalk-mid:#46564C; --chalk-dim:#6B7C72;
+    --merah:#BB2E26; --amber:#8A6408; --glow:transparent;
+    --shadow:0 1px 2px rgba(21,32,26,.04), 0 10px 28px -18px rgba(21,32,26,.35);
+    --ring:rgba(187,46,38,.35);
+  }
+
+  :root[data-theme="dark"] {
+    --pitch:#0D1411; --raised:#151E19; --sunken:#101813;
+    --line:#26332C; --line-soft:#1D2721;
+    --chalk:#E9EFEA; --chalk-mid:#A9BAB0; --chalk-dim:#82938A;
+    --merah:#F0574E; --amber:#E7BC63; --glow:rgba(231,188,99,.075);
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 34px -20px rgba(0,0,0,.8);
+    --ring:rgba(240,87,78,.45);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--pitch);
+    color: var(--chalk);
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: clamp(1.25rem, 5vw, 2.75rem) var(--pad) 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  :where(a) { color: var(--merah); }
+
+  :where(button):focus-visible,
+  :where(a):focus-visible {
+    outline: 2px solid var(--merah);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* ---------- Masthead ---------- */
+
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .eyebrow {
+    font-family: var(--font-data);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--chalk-dim);
+    margin: 0;
+  }
+
+  .masthead h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 11vw, 3.5rem);
+    line-height: 0.94;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+    text-wrap: balance;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .masthead h1 em {
+    font-style: normal;
+    color: var(--merah);
+  }
+
+  .lede {
+    margin: 0;
+    max-width: 34rem;
+    color: var(--chalk-mid);
+    font-size: var(--fs-md);
+  }
+
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-top: 0.35rem;
+  }
+
+  .fact {
+    background: var(--raised);
+    padding: 0.7rem 0.85rem 0.8rem;
+  }
+
+  .fact b {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--fs-xl);
+    line-height: 1;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .fact span {
+    display: block;
+    font-size: var(--fs-xs);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--chalk-dim);
+    margin-top: 0.3rem;
+  }
+
+  /* ---------- Section headings ---------- */
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin: 0 0 0.9rem;
+  }
+
+  .sec-head h2 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.045em;
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .sec-head::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  /* ---------- Bagian yang bisa dibuka-tutup ---------- */
+
+  .fold > summary.sec-head {
+    margin: 0;
+    padding: 0.15rem 0;
+    cursor: pointer;
+    list-style: none;
+    border-radius: 4px;
+  }
+
+  .fold > summary.sec-head::-webkit-details-marker { display: none; }
+
+  .fold[open] > summary.sec-head { margin-bottom: 0.9rem; }
+
+  .fold > summary:focus-visible {
+    outline: 2px solid var(--merah);
+    outline-offset: 3px;
+  }
+
+  .fold-toggle {
+    order: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex: none;
+    font-family: var(--font-data);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--chalk-dim);
+    transition: color .15s;
+  }
+
+  .fold > summary:hover .fold-toggle { color: var(--chalk); }
+
+  .fold-toggle::before { content: "Tampilkan"; }
+  .fold[open] .fold-toggle::before { content: "Sembunyikan"; }
+
+  .fold-chev {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: translateY(-1px) rotate(45deg);
+    transition: transform .18s ease;
+  }
+
+  .fold[open] .fold-chev { transform: translateY(2px) rotate(-135deg); }
+
+  .fold-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  /* ---------- Team filter ---------- */
+
+  .filter-note {
+    font-size: var(--fs-sm);
+    color: var(--chalk-dim);
+    margin: 0 0 0.65rem;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .chip {
+    font: inherit;
+    font-size: var(--fs-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid var(--line);
+    background: var(--raised);
+    color: var(--chalk-mid);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color .15s, color .15s, background .15s;
+  }
+
+  .chip:hover { border-color: var(--chalk-dim); color: var(--chalk); }
+
+  .chip[aria-pressed="true"] {
+    background: var(--chalk);
+    border-color: var(--chalk);
+    color: var(--pitch);
+  }
+
+  .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--kit, var(--chalk-dim));
+    box-shadow: 0 0 0 1px rgba(128,128,128,.45) inset, 0 0 0 1px rgba(128,128,128,.28);
+    flex: none;
+  }
+
+  /* ---------- Night cards ---------- */
+
+  .nights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+  }
+
+  .night {
+    position: relative;
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  .night::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 150px;
+    background: radial-gradient(115% 100% at 50% 0%, var(--glow), transparent 72%);
+    pointer-events: none;
+  }
+
+  .night-head {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.95rem var(--pad) 0.85rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .night-head .label {
+    font-family: var(--font-data);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--chalk-dim);
+    display: block;
+  }
+
+  .night-head .date {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.035em;
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    line-height: 1.15;
+    display: block;
+    margin-top: 0.15rem;
+  }
+
+  .pill {
+    flex: none;
+    font-family: var(--font-data);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--chalk-dim);
+    white-space: nowrap;
+  }
+
+  .pill[data-state="today"] {
+    border-color: var(--merah);
+    color: var(--merah);
+    font-weight: 700;
+  }
+
+  .pill[data-state="done"] {
+    opacity: 0.55;
+    text-decoration: line-through;
+  }
+
+  /* ---------- Rows ---------- */
+
+  .rows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 5.4rem 1fr auto;
+    align-items: center;
+    gap: 0.5rem 0.85rem;
+    padding: 0.55rem var(--pad);
+    border-bottom: 1px solid var(--line-soft);
+    transition: opacity .18s;
+  }
+
+  .row:last-child { border-bottom: 0; }
+
+  .time {
+    font-family: var(--font-data);
+    font-size: var(--fs-sm);
+    font-variant-numeric: tabular-nums;
+    color: var(--chalk-dim);
+    letter-spacing: -0.01em;
+  }
+
+  /* Baris pertandingan */
+
+  .row.match {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    background: var(--raised);
+  }
+
+  .row.match .time { color: var(--chalk); font-weight: 600; }
+
+  .tie {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+  }
+
+  .tie .team {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .tie .vs {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--chalk-dim);
+  }
+
+  .tag {
+    font-family: var(--font-data);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--chalk-dim);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* Baris non-pertandingan: agenda, bukan laga */
+
+  .row.agenda {
+    background: var(--sunken);
+  }
+
+  .row.agenda .what {
+    font-size: var(--fs-sm);
+    color: var(--chalk-mid);
+  }
+
+  /* Penanda tim yang main 2x malam itu */
+
+  .note-double {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0;
+    padding: 0.6rem var(--pad) 0.75rem;
+    border-top: 1px solid var(--line);
+    font-size: var(--fs-sm);
+    color: var(--chalk-mid);
+    background: var(--sunken);
+  }
+
+  .note-double b {
+    color: var(--amber);
+    font-weight: 600;
+  }
+
+  .warn {
+    display: block;
+    margin: 0;
+    padding: 0.65rem var(--pad) 0.8rem;
+    border-top: 1px solid var(--line);
+    background: var(--sunken);
+    font-size: var(--fs-sm);
+    color: var(--chalk-mid);
+  }
+
+  .warn strong { color: var(--chalk); font-weight: 600; }
+
+  /* Filter state */
+
+  body.filtering .row.match:not(.hit),
+  body.filtering .row.agenda {
+    opacity: 0.28;
+  }
+
+  body.filtering .row.match.hit {
+    background: color-mix(in srgb, var(--merah) 7%, var(--raised));
+  }
+
+  /* ---------- Panels ---------- */
+
+  .panel {
+    background: var(--raised);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: var(--pad);
+    box-shadow: var(--shadow);
+  }
+
+  .roster {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .squad {
+    background: var(--raised);
+    padding: 0.8rem 1rem 0.95rem;
+  }
+
+  .squad-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin: 0 0 0.55rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .squad-head .nm {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: var(--fs-md);
+    font-weight: 700;
+  }
+
+  .squad-head .kit {
+    color: var(--chalk-dim);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .squad-head .cnt {
+    margin-left: auto;
+    font-family: var(--font-data);
+    font-size: var(--fs-xs);
+    font-variant-numeric: tabular-nums;
+    color: var(--chalk-dim);
+  }
+
+  .players {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.18rem;
+    font-size: var(--fs-sm);
+    color: var(--chalk-mid);
+  }
+
+  .players .mark {
+    font-family: var(--font-data);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-left: 0.3rem;
+  }
+
+  .total {
+    margin: 0.85rem 0 0;
+    font-size: var(--fs-sm);
+    color: var(--chalk-dim);
+  }
+
+  /* Poin */
+
+  .points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .points li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--line-soft);
+    font-size: var(--fs-sm);
+  }
+
+  .points li:last-child { border-bottom: 0; }
+
+  .points .pts {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    line-height: 1;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    min-width: 1.4rem;
+    color: var(--merah);
+  }
+
+  .points .pts[data-zero] { color: var(--chalk-dim); }
+
+  .rules {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .rules li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.7rem;
+    font-size: var(--fs-sm);
+    color: var(--chalk-mid);
+  }
+
+  .rules li::before {
+    content: "";
+    width: 3px;
+    height: 1.05em;
+    margin-top: 0.15em;
+    background: var(--line);
+    border-radius: 2px;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.15rem;
+  }
+
+  /* ---------- Klasemen ---------- */
+
+  .scroller {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--fs-sm);
+    font-variant-numeric: tabular-nums;
+    min-width: 30rem;
+  }
+
+  thead th {
+    font-family: var(--font-data);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--chalk-dim);
+    font-weight: 400;
+    text-align: right;
+    padding: 0 0.5rem 0.6rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  thead th:first-child { text-align: left; padding-left: 0; }
+
+  tbody td {
+    padding: 0.55rem 0.5rem;
+    border-bottom: 1px solid var(--line-soft);
+    text-align: right;
+    color: var(--chalk-dim);
+  }
+
+  tbody td:first-child {
+    text-align: left;
+    padding-left: 0;
+    color: var(--chalk);
+  }
+
+  tbody tr:last-child td { border-bottom: 0; }
+
+  .tname {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: var(--fs-md);
+    font-weight: 700;
+  }
+
+  /* ---------- Checklist ---------- */
+
+  .todo {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .todo li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.7rem;
+    align-items: start;
+    font-size: var(--fs-sm);
+    color: var(--chalk-mid);
+  }
+
+  .todo li::before {
+    content: "";
+    width: 0.95rem;
+    height: 0.95rem;
+    margin-top: 0.22em;
+    border: 1px solid var(--chalk-dim);
+    border-radius: 3px;
+  }
+
+  .todo strong { color: var(--chalk); font-weight: 600; }
+
+  footer {
+    font-size: var(--fs-xs);
+    color: var(--chalk-dim);
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 30rem) {
+    .row { grid-template-columns: 4.6rem 1fr; }
+    .tag { grid-column: 2; text-align: left; margin-top: -0.3rem; }
+    .tie { font-size: 1.3rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+
+  @media print {
+    :root {
+      --pitch:#FFFFFF; --raised:#FFFFFF; --sunken:#F4F6F2;
+      --line:#C9D3C8; --line-soft:#E2E8E1;
+      --chalk:#15201A; --chalk-mid:#3D4C43; --chalk-dim:#5D6E64;
+      --merah:#A82720; --amber:#7A5806; --glow:transparent;
+      --shadow:none;
+    }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .wrap { max-width: none; padding: 0 0 1rem; gap: 1.4rem; }
+    .night, .panel, .squad { break-inside: avoid; page-break-inside: avoid; }
+    .row { break-inside: avoid; page-break-inside: avoid; }
+    section, .fold { break-inside: avoid; page-break-inside: avoid; }
+    /* Versi cetak selalu lengkap, apa pun yang sedang tertutup di layar */
+    .fold > .fold-body { display: flex !important; }
+    .fold > summary.sec-head { margin-bottom: 0.9rem; }
+    .fold-toggle { display: none; }
+    .filter-note, .chips { display: none; }
+    .scroller { overflow: visible; }
+    table { min-width: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Turnamen Internal &middot; Agustusan 2026</p>
+    <h1>Mini Soccer <em>League</em></h1>
+    <p class="lede">Sistem liga penuh — kelima tim saling bertemu satu kali. Sepuluh pertandingan, tiga malam, satu lapangan.</p>
+    <div class="facts">
+      <div class="fact"><b>47</b><span>Pemain</span></div>
+      <div class="fact"><b>5</b><span>Tim</span></div>
+      <div class="fact"><b>10</b><span>Laga</span></div>
+      <div class="fact"><b>3</b><span>Malam</span></div>
+    </div>
+  </header>
+
+  <section aria-labelledby="h-jadwal">
+    <div class="sec-head"><h2 id="h-jadwal">Jadwal</h2></div>
+    <p class="filter-note">Pilih tim untuk menyorot laganya saja.</p>
+    <div class="chips" role="group" aria-label="Saring jadwal berdasarkan tim">
+      <button type="button" class="chip" data-team="" aria-pressed="true">Semua tim</button>
+      <button type="button" class="chip" data-team="A" aria-pressed="false"><span class="dot" style="--kit:#D93A32"></span>Tim A</button>
+      <button type="button" class="chip" data-team="B" aria-pressed="false"><span class="dot" style="--kit:#2F6FB5"></span>Tim B</button>
+      <button type="button" class="chip" data-team="C" aria-pressed="false"><span class="dot" style="--kit:#E0A81E"></span>Tim C</button>
+      <button type="button" class="chip" data-team="D" aria-pressed="false"><span class="dot" style="--kit:#3AA76D"></span>Tim D</button>
+      <button type="button" class="chip" data-team="E" aria-pressed="false"><span class="dot" style="--kit:#F0F2EE"></span>Tim E</button>
+    </div>
+  </section>
+
+  <div class="nights">
+
+    <!-- ===== Malam 1 ===== -->
+    <article class="night" aria-labelledby="n1">
+      <div class="night-head">
+        <div>
+          <span class="label">Malam 1</span>
+          <span class="date" id="n1">Kamis, 30 Juli</span>
+        </div>
+        <span class="pill" data-date="2026-07-30">&mdash;</span>
+      </div>
+
+      <ul class="rows">
+        <li class="row agenda"><span class="time">17.45</span><span class="what">Absensi &amp; pengecekan tim — sebelum Maghrib</span></li>
+        <li class="row agenda"><span class="time">17.57</span><span class="what">Sholat Maghrib</span></li>
+        <li class="row agenda"><span class="time">18.15</span><span class="what">Briefing wasit &amp; pemanasan</span></li>
+
+        <li class="row match" data-teams="A,C">
+          <span class="time">18.20</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#D93A32"></span>Tim A</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#E0A81E"></span>Tim C</span></span>
+          <span class="tag">Laga 1</span>
+        </li>
+        <li class="row match" data-teams="B,E">
+          <span class="time">18.46</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#2F6FB5"></span>Tim B</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#F0F2EE"></span>Tim E</span></span>
+          <span class="tag">Laga 2</span>
+        </li>
+        <li class="row match" data-teams="A,D">
+          <span class="time">19.12</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#D93A32"></span>Tim A</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#3AA76D"></span>Tim D</span></span>
+          <span class="tag">Laga 3</span>
+        </li>
+
+        <li class="row agenda"><span class="time">19.34</span><span class="what">Foto bersama, acara bebas &amp; bubar</span></li>
+      </ul>
+
+      <p class="note-double"><span class="dot" style="--kit:#D93A32"></span> <b>Tim A</b> main dua kali malam ini — jeda 30 menit antar laga.</p>
+    </article>
+
+    <!-- ===== Malam 2 ===== -->
+    <article class="night" aria-labelledby="n2">
+      <div class="night-head">
+        <div>
+          <span class="label">Malam 2</span>
+          <span class="date" id="n2">Rabu, 5 Agustus</span>
+        </div>
+        <span class="pill" data-date="2026-08-05">&mdash;</span>
+      </div>
+
+      <ul class="rows">
+        <li class="row agenda"><span class="time">17.57</span><span class="what">Sholat Maghrib</span></li>
+        <li class="row agenda"><span class="time">18.12</span><span class="what">Pemanasan</span></li>
+
+        <li class="row match" data-teams="C,D">
+          <span class="time">18.15</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#E0A81E"></span>Tim C</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#3AA76D"></span>Tim D</span></span>
+          <span class="tag">Laga 4</span>
+        </li>
+        <li class="row match" data-teams="A,E">
+          <span class="time">18.41</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#D93A32"></span>Tim A</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#F0F2EE"></span>Tim E</span></span>
+          <span class="tag">Laga 5</span>
+        </li>
+        <li class="row match" data-teams="B,D">
+          <span class="time">19.07</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#2F6FB5"></span>Tim B</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#3AA76D"></span>Tim D</span></span>
+          <span class="tag">Laga 6</span>
+        </li>
+        <li class="row match" data-teams="C,E">
+          <span class="time">19.33</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#E0A81E"></span>Tim C</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#F0F2EE"></span>Tim E</span></span>
+          <span class="tag">Laga 7</span>
+        </li>
+
+        <li class="row agenda"><span class="time">19.55</span><span class="what">Bubar</span></li>
+      </ul>
+
+      <p class="note-double"><span class="dot" style="--kit:#E0A81E"></span><span class="dot" style="--kit:#3AA76D"></span><span class="dot" style="--kit:#F0F2EE"></span> <b>Tim C, D, dan E</b> masing-masing main dua kali malam ini.</p>
+
+      <p class="warn"><strong>Sesi paling padat dengan empat laga.</strong> Durasi tiap laga pasti 22 menit, jadi asal Laga 4 dimulai tepat 18.15, sesi ini selesai 19.55. Panitia memanggil dua tim berikutnya ke pinggir lapangan saat laga berjalan tinggal 5 menit.</p>
+    </article>
+
+    <!-- ===== Malam 3 ===== -->
+    <article class="night" aria-labelledby="n3">
+      <div class="night-head">
+        <div>
+          <span class="label">Malam 3 &middot; Penentuan juara</span>
+          <span class="date" id="n3">Kamis, 6 Agustus</span>
+        </div>
+        <span class="pill" data-date="2026-08-06">&mdash;</span>
+      </div>
+
+      <ul class="rows">
+        <li class="row agenda"><span class="time">17.57</span><span class="what">Sholat Maghrib</span></li>
+        <li class="row agenda"><span class="time">18.12</span><span class="what">Pemanasan</span></li>
+
+        <li class="row match" data-teams="A,B">
+          <span class="time">18.15</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#D93A32"></span>Tim A</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#2F6FB5"></span>Tim B</span></span>
+          <span class="tag">Laga 8</span>
+        </li>
+        <li class="row match" data-teams="D,E">
+          <span class="time">18.41</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#3AA76D"></span>Tim D</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#F0F2EE"></span>Tim E</span></span>
+          <span class="tag">Laga 9</span>
+        </li>
+        <li class="row match" data-teams="B,C">
+          <span class="time">19.07</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#2F6FB5"></span>Tim B</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#E0A81E"></span>Tim C</span></span>
+          <span class="tag">Laga 10</span>
+        </li>
+
+        <li class="row agenda"><span class="time">19.29</span><span class="what">Foto bersama, acara bebas &amp; bubar</span></li>
+      </ul>
+
+      <p class="note-double"><span class="dot" style="--kit:#2F6FB5"></span> <b>Tim B</b> main dua kali. Kelima tim turun malam ini — juara ditentukan dengan semua tim di lapangan.</p>
+
+      <p class="warn"><strong>Tidak ada penyerahan hadiah malam ini.</strong> Rekap klasemen akhir dan pengumuman juara dilakukan di acara puncak Agustusan di kantor, 19 Agustus.</p>
+    </article>
+
+  </div>
+
+  <!-- ===== Tim ===== -->
+  <details class="fold">
+    <summary class="sec-head">
+      <h2 id="h-tim">Tim &amp; Warna</h2>
+      <span class="fold-toggle"><span class="fold-chev"></span></span>
+    </summary>
+    <div class="fold-body">
+    <div class="roster">
+
+      <div class="squad">
+        <p class="squad-head"><span class="dot" style="--kit:#D93A32"></span><span class="nm">Tim A</span><span class="kit">Merah</span><span class="cnt">10</span></p>
+        <ul class="players">
+          <li>eqi</li>
+          <li>alif naufal</li>
+          <li>Febrian Dhimas S</li>
+          <li>Rey</li>
+          <li>Manfred Michael</li>
+          <li>Arham</li>
+          <li>Jaka Pamudyanto</li>
+          <li>fauzi jundullah<span class="mark">GK</span></li>
+          <li>Adam Hadi Pratama</li>
+          <li>Damar</li>
+        </ul>
+      </div>
+
+      <div class="squad">
+        <p class="squad-head"><span class="dot" style="--kit:#2F6FB5"></span><span class="nm">Tim B</span><span class="kit">Biru</span><span class="cnt">10</span></p>
+        <ul class="players">
+          <li>Saka Adiata</li>
+          <li>Triyono</li>
+          <li>Putra Anggiardi</li>
+          <li>Aji Pamungkas Fiasto</li>
+          <li>Persada Wiyandhika (Yoko)</li>
+          <li>Wildan</li>
+          <li>Rifqi Zulfikar</li>
+          <li>Adika Hertanto</li>
+          <li>Rafie Azka Soenarno</li>
+          <li>Aubert Oktaviantono</li>
+        </ul>
+      </div>
+
+      <div class="squad">
+        <p class="squad-head"><span class="dot" style="--kit:#E0A81E"></span><span class="nm">Tim C</span><span class="kit">Kuning</span><span class="cnt">9</span></p>
+        <ul class="players">
+          <li>Fajar Rianda<span class="mark">absen 30 Jul</span></li>
+          <li>Asqolani</li>
+          <li>Adhitya I Mahaputra</li>
+          <li>Anggit Baskorojati</li>
+          <li>Rangga Ahnaf</li>
+          <li>David</li>
+          <li>Dhika wildan nur firdaus</li>
+          <li>Pande Wikantyasa Maswita</li>
+          <li>Alif Prastowo</li>
+        </ul>
+      </div>
+
+      <div class="squad">
+        <p class="squad-head"><span class="dot" style="--kit:#3AA76D"></span><span class="nm">Tim D</span><span class="kit">Hijau</span><span class="cnt">9</span></p>
+        <ul class="players">
+          <li>Mukhibillah</li>
+          <li>Grozny</li>
+          <li>Hanif Fathurrahman N</li>
+          <li>Grapheel Darel Pandey</li>
+          <li>Gilang Ramadhani</li>
+          <li>Nasser Maronie</li>
+          <li>Hazlan Muhammad Qodri</li>
+          <li>trang w wardhani</li>
+          <li>Zalfy Putra Rezky</li>
+        </ul>
+      </div>
+
+      <div class="squad">
+        <p class="squad-head"><span class="dot" style="--kit:#F0F2EE"></span><span class="nm">Tim E</span><span class="kit">Putih</span><span class="cnt">9</span></p>
+        <ul class="players">
+          <li>Fahmi Khoerullatif</li>
+          <li>Herdi Agusthio</li>
+          <li>Jaffer Sadeg</li>
+          <li>Wilsan Wijaya</li>
+          <li>Andhika Aprianto</li>
+          <li>Muhamad Adillah Fatih</li>
+          <li>Galih Kusumah</li>
+          <li>Septriandi</li>
+          <li>Arungi Cahaya</li>
+        </ul>
+      </div>
+
+    </div>
+    <p class="total">Total 47 pemain. Tiap tim main 4 laga, sekitar 60 menit waktu bermain per orang dengan rotasi pergantian bebas. Kiper dirotasi di dalam tim masing-masing. Warna masih bisa disesuaikan dengan apa yang tersedia di hari-H, asal kelimanya mudah dibedakan dari jauh.</p>
+    </div>
+  </details>
+
+  <!-- ===== Aturan & Poin ===== -->
+  <details class="fold">
+    <summary class="sec-head">
+      <h2 id="h-aturan">Aturan</h2>
+      <span class="fold-toggle"><span class="fold-chev"></span></span>
+    </summary>
+    <div class="fold-body">
+    <div class="grid-2">
+      <div class="panel">
+        <ul class="rules">
+          <li>Sistem liga — semua tim saling bertemu satu kali.</li>
+          <li>Durasi 2 &times; 10 menit, jeda 2 menit.</li>
+          <li>Pergantian pemain bebas kapan saja, dengan persetujuan wasit.</li>
+          <li>Laga boleh berakhir imbang — tidak ada adu penalti.</li>
+          <li>Keputusan wasit bersifat final.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <ul class="points">
+          <li><span class="pts">3</span> Menang</li>
+          <li><span class="pts">1</span> Seri</li>
+          <li><span class="pts" data-zero>0</span> Kalah</li>
+        </ul>
+        <p class="total">Klasemen sama poin diputus berurutan: selisih gol, lalu jumlah gol, lalu head-to-head.</p>
+      </div>
+    </div>
+    </div>
+  </details>
+
+  <!-- ===== Klasemen ===== -->
+  <section aria-labelledby="h-klasemen">
+    <div class="sec-head"><h2 id="h-klasemen">Klasemen</h2></div>
+    <div class="panel">
+      <div class="scroller">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Tim</th>
+              <th scope="col" title="Main">Main</th>
+              <th scope="col" title="Menang">M</th>
+              <th scope="col" title="Seri">S</th>
+              <th scope="col" title="Kalah">K</th>
+              <th scope="col" title="Gol memasukkan">GM</th>
+              <th scope="col" title="Gol kemasukan">GK</th>
+              <th scope="col" title="Selisih gol">SG</th>
+              <th scope="col">Poin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="tname"><span class="dot" style="--kit:#D93A32"></span>Tim A</span></td><td>0</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>0</td></tr>
+            <tr><td><span class="tname"><span class="dot" style="--kit:#2F6FB5"></span>Tim B</span></td><td>0</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>0</td></tr>
+            <tr><td><span class="tname"><span class="dot" style="--kit:#E0A81E"></span>Tim C</span></td><td>0</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>0</td></tr>
+            <tr><td><span class="tname"><span class="dot" style="--kit:#3AA76D"></span>Tim D</span></td><td>0</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>0</td></tr>
+            <tr><td><span class="tname"><span class="dot" style="--kit:#F0F2EE"></span>Tim E</span></td><td>0</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="total">Diisi panitia setiap selesai malam pertandingan. Klasemen akhir dan juara diumumkan di acara puncak Agustusan di kantor, 19 Agustus.</p>
+    </div>
+  </section>
+
+  <!-- ===== Checklist panitia ===== -->
+  <details class="fold">
+    <summary class="sec-head">
+      <h2 id="h-todo">Sebelum 30 Juli</h2>
+      <span class="fold-toggle"><span class="fold-chev"></span></span>
+    </summary>
+    <div class="fold-body">
+      <div class="panel">
+        <ul class="todo">
+          <li><span><strong>Bagi tim lewat snake draft.</strong> Ranking pemain ke tiga level dulu, jangan undian murni — di liga penuh, tim yang timpang harus menjalani keempat laganya sampai habis.</span></li>
+          <li><span><strong>Pastikan tiap tim punya penanda warna yang jelas dan berbeda</strong> — apa pun bentuknya — dan sudah terpasang sebelum Maghrib di malam pertama.</span></li>
+          <li><span><strong>Umumkan sistem poin</strong> sebelum peluit pertama, bukan setelah ada tim yang dirugikan.</span></li>
+          <li><span><strong>Siapkan papan klasemen</strong> yang diperbarui tiap malam supaya semua tim tahu posisinya.</span></li>
+          <li><span><strong>Tanyakan perpanjangan 15 menit</strong> untuk malam 5 Agustus — satu-satunya sesi yang cadangan waktunya tipis.</span></li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <footer>
+    Satu lapangan, tiga malam, pukul 18.00&ndash;20.00 WIB. Semua jam pertandingan sudah memperhitungkan Maghrib pukul 17.57 dan waktu pergantian tim di lapangan.
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    // --- Saring jadwal per tim ---
+    var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+    var matches = Array.prototype.slice.call(document.querySelectorAll('.row.match'));
+
+    function apply(team) {
+      chips.forEach(function (c) {
+        c.setAttribute('aria-pressed', String(c.dataset.team === team));
+      });
+      document.body.classList.toggle('filtering', team !== '');
+      matches.forEach(function (row) {
+        var list = (row.dataset.teams || '').split(',');
+        row.classList.toggle('hit', team !== '' && list.indexOf(team) !== -1);
+      });
+    }
+
+    chips.forEach(function (c) {
+      c.addEventListener('click', function () {
+        apply(c.getAttribute('aria-pressed') === 'true' ? '' : c.dataset.team);
+      });
+    });
+
+    // --- Hitung mundur per malam ---
+    var now = new Date();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    document.querySelectorAll('.pill[data-date]').forEach(function (pill) {
+      var p = pill.dataset.date.split('-');
+      var when = new Date(+p[0], +p[1] - 1, +p[2]);
+      var days = Math.round((when - today) / 86400000);
+
+      if (days < 0)       { pill.textContent = 'Selesai';        pill.dataset.state = 'done'; }
+      else if (days === 0){ pill.textContent = 'Malam ini';      pill.dataset.state = 'today'; }
+      else if (days === 1){ pill.textContent = 'Besok';          pill.dataset.state = 'soon'; }
+      else                { pill.textContent = days + ' hari lagi'; pill.dataset.state = 'upcoming'; }
+    });
+  })();
+</script>
+</body>
+</html>
