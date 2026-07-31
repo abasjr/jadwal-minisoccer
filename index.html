@@ -458,6 +458,19 @@
     color: var(--chalk-dim);
   }
 
+  .tie .score {
+    font-family: var(--font-data);
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--merah);
+    padding: 0.1rem 0.4rem;
+    border-radius: 5px;
+    background: color-mix(in srgb, var(--merah) 10%, transparent);
+  }
+
   .tag {
     font-family: var(--font-data);
     font-size: var(--fs-xs);
@@ -805,18 +818,18 @@
 
         <li class="row match" data-teams="A,C">
           <span class="time">18.20</span>
-          <span class="tie"><span class="team"><span class="dot" style="--kit:#D93A32"></span>Tim A</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#E0A81E"></span>Tim C</span></span>
-          <span class="tag">Laga 1</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#D93A32"></span>Tim A</span><span class="score">3&ndash;3</span><span class="team"><span class="dot" style="--kit:#E0A81E"></span>Tim C</span></span>
+          <span class="tag">Laga 1 &middot; FT</span>
         </li>
         <li class="row match" data-teams="B,E">
           <span class="time">18.46</span>
-          <span class="tie"><span class="team"><span class="dot" style="--kit:#2F6FB5"></span>Tim B</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#F0F2EE"></span>Tim E</span></span>
-          <span class="tag">Laga 2</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#2F6FB5"></span>Tim B</span><span class="score">3&ndash;2</span><span class="team"><span class="dot" style="--kit:#F0F2EE"></span>Tim E</span></span>
+          <span class="tag">Laga 2 &middot; FT</span>
         </li>
         <li class="row match" data-teams="A,D">
           <span class="time">19.12</span>
-          <span class="tie"><span class="team"><span class="dot" style="--kit:#D93A32"></span>Tim A</span><span class="vs">vs</span><span class="team"><span class="dot" style="--kit:#3AA76D"></span>Tim D</span></span>
-          <span class="tag">Laga 3</span>
+          <span class="tie"><span class="team"><span class="dot" style="--kit:#D93A32"></span>Tim A</span><span class="score">1&ndash;1</span><span class="team"><span class="dot" style="--kit:#3AA76D"></span>Tim D</span></span>
+          <span class="tag">Laga 3 &middot; FT</span>
         </li>
 
         <li class="row agenda"><span class="time">19.34</span><span class="what">Foto bersama, acara bebas &amp; bubar</span></li>
@@ -1050,11 +1063,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td><span class="tname"><span class="dot" style="--kit:#D93A32"></span>Tim A</span></td><td>0</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>0</td></tr>
-            <tr><td><span class="tname"><span class="dot" style="--kit:#2F6FB5"></span>Tim B</span></td><td>0</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>0</td></tr>
-            <tr><td><span class="tname"><span class="dot" style="--kit:#E0A81E"></span>Tim C</span></td><td>0</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>0</td></tr>
-            <tr><td><span class="tname"><span class="dot" style="--kit:#3AA76D"></span>Tim D</span></td><td>0</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>0</td></tr>
-            <tr><td><span class="tname"><span class="dot" style="--kit:#F0F2EE"></span>Tim E</span></td><td>0</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>0</td></tr>
+            <tr><td><span class="tname"><span class="dot" style="--kit:#2F6FB5"></span>Tim B</span></td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>2</td><td>+1</td><td>3</td></tr>
+            <tr><td><span class="tname"><span class="dot" style="--kit:#D93A32"></span>Tim A</span></td><td>2</td><td>0</td><td>2</td><td>0</td><td>4</td><td>4</td><td>+0</td><td>2</td></tr>
+            <tr><td><span class="tname"><span class="dot" style="--kit:#E0A81E"></span>Tim C</span></td><td>1</td><td>0</td><td>1</td><td>0</td><td>3</td><td>3</td><td>+0</td><td>1</td></tr>
+            <tr><td><span class="tname"><span class="dot" style="--kit:#3AA76D"></span>Tim D</span></td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>+0</td><td>1</td></tr>
+            <tr><td><span class="tname"><span class="dot" style="--kit:#F0F2EE"></span>Tim E</span></td><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td><td>3</td><td>&minus;1</td><td>0</td></tr>
           </tbody>
         </table>
       </div>
