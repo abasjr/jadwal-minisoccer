@@ -186,6 +186,146 @@
     margin-top: 0.3rem;
   }
 
+  /* ---------- Spanduk juara ---------- */
+
+  .champ {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background: var(--raised);
+    border: 1px solid color-mix(in srgb, var(--amber) 45%, var(--line));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem var(--pad) 1.45rem;
+  }
+
+  .champ::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 160px;
+    background: radial-gradient(120% 100% at 50% 0%,
+      color-mix(in srgb, var(--amber) 16%, transparent), transparent 72%);
+    pointer-events: none;
+  }
+
+  /* Konfeti: titik-titik berwarna kelima tim, mengumpul di kedua sudut atas */
+  .champ .cf {
+    position: absolute;
+    top: 14px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  .champ .cf-a {
+    left: 12px;
+    background: #D93A32;
+    box-shadow:
+      26px 18px 0 #E0A81E, 8px 44px 0 #2F6FB5, 48px 5px 0 #3AA76D,
+      70px 32px 0 -1px #D93A32, 34px 64px 0 -1px #E0A81E,
+      92px 10px 0 -1px #2F6FB5, 58px 48px 0 -2px #3AA76D, 16px 82px 0 -2px #D93A32;
+  }
+
+  .champ .cf-b {
+    right: 12px;
+    background: #2F6FB5;
+    box-shadow:
+      -26px 18px 0 #E0A81E, -8px 44px 0 #D93A32, -48px 5px 0 #3AA76D,
+      -70px 32px 0 -1px #2F6FB5, -34px 64px 0 -1px #E0A81E,
+      -92px 10px 0 -1px #D93A32, -58px 48px 0 -2px #3AA76D, -16px 82px 0 -2px #2F6FB5;
+  }
+
+  .champ-eyebrow {
+    position: relative;
+    margin: 0 0 0.55rem;
+    font-family: var(--font-data);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+
+  .champ-title {
+    position: relative;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 9vw, 3.25rem);
+    line-height: 1;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+  }
+
+  .champ-title .dot { width: 14px; height: 14px; }
+
+  .champ-label {
+    position: relative;
+    margin: 0.35rem 0 0;
+    font-size: var(--fs-sm);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--chalk-dim);
+  }
+
+  .champ-runner {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0.95rem 0 0;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--sunken);
+    font-size: var(--fs-sm);
+    color: var(--chalk-mid);
+  }
+
+  .champ-runner b { color: var(--chalk); font-weight: 600; }
+
+  .champ-note {
+    position: relative;
+    margin: 0.9rem auto 0;
+    max-width: 30rem;
+    font-size: var(--fs-sm);
+    color: var(--chalk-mid);
+  }
+
+  /* Lencana juara di klasemen & kartu tim */
+  .medal-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-left: 0.5rem;
+    padding: 0.12rem 0.5rem;
+    border-radius: 999px;
+    font-family: var(--font-data);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+
+  .medal-chip.gold {
+    color: var(--amber);
+    border: 1px solid color-mix(in srgb, var(--amber) 55%, transparent);
+    background: color-mix(in srgb, var(--amber) 12%, transparent);
+  }
+
+  .medal-chip.silver {
+    color: var(--chalk-mid);
+    border: 1px solid var(--line);
+    background: var(--sunken);
+  }
+
   /* ---------- Section headings ---------- */
 
   .sec-head {
@@ -758,7 +898,7 @@
     }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .wrap { max-width: none; padding: 0 0 1rem; gap: 1.4rem; }
-    .night, .panel, .squad { break-inside: avoid; page-break-inside: avoid; }
+    .night, .panel, .squad, .champ { break-inside: avoid; page-break-inside: avoid; }
     .row { break-inside: avoid; page-break-inside: avoid; }
     section, .fold { break-inside: avoid; page-break-inside: avoid; }
     /* Versi cetak selalu lengkap, apa pun yang sedang tertutup di layar */
@@ -786,6 +926,17 @@
     </div>
   </header>
 
+  <!-- ===== Spanduk juara ===== -->
+  <section class="champ" aria-label="Juara turnamen">
+    <i class="cf cf-a" aria-hidden="true"></i>
+    <i class="cf cf-b" aria-hidden="true"></i>
+    <p class="champ-eyebrow">&#127881; Liga Selesai &middot; Agustusan 2026 &#127881;</p>
+    <p class="champ-title">&#127942; <span class="dot" style="--kit:#2F6FB5"></span> Tim B</p>
+    <p class="champ-label">Juara Mini Soccer League</p>
+    <p class="champ-runner">&#129352; Runner-up &mdash; <span class="dot" style="--kit:#3AA76D"></span> <b>Tim D</b></p>
+    <p class="champ-note">Hadiah untuk <strong>Juara 1 &amp; Juara 2</strong> diserahkan di acara puncak Agustusan <strong>19 Agustus</strong> di kantor Flip tercinta.</p>
+  </section>
+
   <!-- ===== Klasemen ===== -->
   <section aria-labelledby="h-klasemen">
     <div class="sec-head"><h2 id="h-klasemen">Klasemen</h2></div>
@@ -806,8 +957,8 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td><span class="tname"><span class="dot" style="--kit:#2F6FB5"></span>Tim B</span></td><td>4</td><td>3</td><td>0</td><td>1</td><td>6</td><td>5</td><td>+1</td><td>9</td></tr>
-            <tr><td><span class="tname"><span class="dot" style="--kit:#3AA76D"></span>Tim D</span></td><td>4</td><td>2</td><td>1</td><td>1</td><td>7</td><td>4</td><td>+3</td><td>7</td></tr>
+            <tr><td><span class="tname"><span class="dot" style="--kit:#2F6FB5"></span>Tim B</span><span class="medal-chip gold">&#127942; Juara 1</span></td><td>4</td><td>3</td><td>0</td><td>1</td><td>6</td><td>5</td><td>+1</td><td>9</td></tr>
+            <tr><td><span class="tname"><span class="dot" style="--kit:#3AA76D"></span>Tim D</span><span class="medal-chip silver">&#129352; Juara 2</span></td><td>4</td><td>2</td><td>1</td><td>1</td><td>7</td><td>4</td><td>+3</td><td>7</td></tr>
             <tr><td><span class="tname"><span class="dot" style="--kit:#D93A32"></span>Tim A</span></td><td>4</td><td>1</td><td>2</td><td>1</td><td>7</td><td>6</td><td>+1</td><td>5</td></tr>
             <tr><td><span class="tname"><span class="dot" style="--kit:#E0A81E"></span>Tim C</span></td><td>4</td><td>1</td><td>1</td><td>2</td><td>8</td><td>8</td><td>+0</td><td>4</td></tr>
             <tr><td><span class="tname"><span class="dot" style="--kit:#F0F2EE"></span>Tim E</span></td><td>4</td><td>1</td><td>0</td><td>3</td><td>6</td><td>11</td><td>&minus;5</td><td>3</td></tr>
@@ -978,7 +1129,7 @@
       </div>
 
       <div class="squad">
-        <p class="squad-head"><span class="dot" style="--kit:#2F6FB5"></span><span class="nm">Tim B</span><span class="kit">Biru</span><span class="cnt">10</span></p>
+        <p class="squad-head"><span class="dot" style="--kit:#2F6FB5"></span><span class="nm">Tim B</span><span class="kit">Biru</span><span class="medal-chip gold">&#127942; Juara 1</span><span class="cnt">10</span></p>
         <ul class="players">
           <li>Damar</li>
           <li>Gilang Ramadhani</li>
@@ -1010,7 +1161,7 @@
       </div>
 
       <div class="squad">
-        <p class="squad-head"><span class="dot" style="--kit:#3AA76D"></span><span class="nm">Tim D</span><span class="kit">Hijau</span><span class="cnt">10</span></p>
+        <p class="squad-head"><span class="dot" style="--kit:#3AA76D"></span><span class="nm">Tim D</span><span class="kit">Hijau</span><span class="medal-chip silver">&#129352; Juara 2</span><span class="cnt">10</span></p>
         <ul class="players">
           <li>Hari</li>
           <li>Mukhibillah</li>
